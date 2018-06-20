@@ -1,0 +1,51 @@
+body {
+    font-family: Josefin Slab, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p, li {
+    font-size: 18px;
+    color:#310b4d;
+}
+
+h2, h3{
+    font-size: 22px;
+    color: #310b4d;
+}
+
+h1{
+    text-align: center;
+}
+
+.topic {
+    background-color: #e9e6e6;
+    padding: 5px;
+    margin: 15px;
+    max-width: 30%;
+    height: 500px;
+    overflow: auto;
+    float: left;
+    border: 2px solid #e9e6e6;
+    border-radius: 5%;
+}
+
+/***************
+ Mobile
+***************/
+@media screen and (max-width: 1023px) {
+    .topic {
+        background-color: #e9e6e6;
+        padding: 5px;
+        margin: 15px;
+        max-width: 44%;
+        height: 500px;
+        overflow: auto;
+        float: left;
+        border: 2px solid #e9e6e6;
+        border-radius: 5%;
+    }
+}    
+@media screen and (max-width: 900px){
+    .topic {
+        max-width: 90%;
+    }
+}

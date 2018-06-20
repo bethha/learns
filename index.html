@@ -1,34 +1,98 @@
-22<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Josefin+Slab|Poiret+One|Quicksand|Text+Me+One" rel="stylesheet">
+	
+	<!--stylesheets-->
+	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="css/icons.css">
     <title>Git</title>
 </head>
 <body>
-    <h1>Commands</h1>
-    <ul><li><strong>cd</strong> change director<</li>
-    <li><strong>mkdir</strong> make directory</li>
-    <li><strong>pwd</strong> find out which directory you are at</li>
-    <li><strong>cd ..</strong> go to one directory on top</li>
-    <li><strong>ls</strong> or <strong>ls -l</strong> list contents (-l) with more details</li>
-    <li><strong>touch 'file.extension'</strong> creates a file within a directory</li>
-    <li></li>    
-</ul>
-<h2>Git Commands</h2>
-<ul>
-    <li><strong>git init</strong> initialize git process</li>
-    <li><strong>git status</strong> check to see the status of files in a repo</li>
-    <li><strong>git commit -m 'reason for comiting'</strong></li>
-    <li><strong>git checkout -- .</strong></li>
-    <li><strong>git add --all</strong>add all files in a repo to be committed</li>
-    <li><strong>git remote add origin https://githib.com/location/file.git</strong>adding the location to where the file has to be pushed into the server</li>
-    <li><strong>git commit -a -m 'comment'</strong>comminting the files</li>
-    <li><strong>git remote - v</strong>checking the location to push at the moment</li>
-    <li><strong>git push origin master</strong>pushing the files into the server</li>
-    <li></li>
-    <li></li>
-</ul>
+    <h1>Workflows</h1>
+    <div class="topic">
+        <h2>Command</h2>
+        <ul>
+            <li><strong>cd</strong> change directory</li>
+            <li><strong>mkdir</strong> make directory</li>
+            <li><strong>pwd</strong> find out which directory you are at</li>
+            <li><strong>cd ..</strong> go to one directory on top</li>
+            <li><strong>ls</strong> or <strong>ls -l</strong> list contents (-l) with more details</li>
+            <li><strong>touch 'file.extension'</strong> creates a file within a directory</li>
+              
+        </ul>
+        <h3>Git Commands</h3>
+        <ul>
+            <li><strong>git init</strong> initialize git process</li>
+            <li><strong>git status</strong> check to see the status of files in a repo</li>
+            <li><strong>git commit -m 'reason for comiting'</strong></li>
+            <li><strong>git checkout -- .</strong></li>
+            <li><strong>git add --all</strong> add all files in a repo to be committed</li>
+            <li><strong>git remote add origin https://githib.com/location/file.git</strong> adding the location to where the file has to be pushed into the server</li>
+            <li><strong>git commit -a -m 'comment'</strong> comminting the files</li>
+            <li><strong>git remote - v</strong> checking the location to push at the moment</li>
+            <li><strong>git push origin master</strong> pushing the files into the server</li>
+            
+        </ul>
+    </div>
+    <div class="topic">
+        <h2>Node JS</h2>
+        <ul>
+            <li>Open command terminal</li>
+            <li>insert <strong>node file.js</strong>. This will open the node datafile with the code which we want to run <br>
+            Example from js code data: <br>
+            var whateverName = require('fs');<br>
+            var https = require('https');<br>
+                       
+            whateverName.writeFile(__dirname + "/index.html", "<h1>Burpo is Zungig</h1>", function(error){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;            if (error) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return console.log(error);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;            } else {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return console.log("Congrats");<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;            }<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;        });<br>
+                    <br>
+                    var myPhotoLocation = 'https://raw.githubusercontent.com/LearnWebCode/welcome-to-git/master/images/dog.jpg'
+                    https.get(myPhotoLocation, function(response){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; response.pipe(unicorn.createWriteStream(__dirname + "/mydog.jpg"));<br>
+                    });<br>
+                    </li>
+            
+        </ul>
+    </div>
+    <div class="topic">
+            <h2>NPM</h2>
+            <p>You can use NPM as a 'shopping' for code packages.</p>
+            <p>You do it through the terminal. To install a jquery and a normalize.css package you need to insert the following commands:</p>
+    
+            <ul>
+                <li><strong>npm init</strong> to start npm</li>
+                <li><strong>npm install jquery</strong> or replace jquery by any other package of choice. This will only install the package, but ideally, do as follows:</li>
+                <li><strong>install jquery --save</strong>-- save will save the information that you installed jquery in your repo adding this information to the <strong>package.json</strong>file, under 'dependencies'. There you will also see the version of the package(s) which was installed. This file will save all the information on all the packages which were installed in a repo. After each installation, always add --save to keep this file up to date. </li>
+                <li>Also, in case the packages have been deleted, you can also install everything again if you only have the package.json file. For that, inside the repo type <strong>npm install</strong>. That will install all directories with the packages files again, which were lost.</li>
+                <li>After installing all the needed packages, rememeber to push them to the server. Just make sure to add the package.json file to the repo, add it to the staging area, commit it and push it to my github account.</li>
+                <li>if you want to check the version of the package which you have installed, just type <strong>npm jquery -v</strong>. Or replace 'jquery' by the desired package</li>
+                <li>In order to know which package to install look in npm website or google the action a package should perform followed by 'npm'</li>
+    ´       </ul>
+    </div>
+    <div class="topic">
+        <h2>Gulp</h2>
+        <p>Gulp is an extension which helps saving a lot of time with coding :)</p>
+        <p>To work with Gulp you first want to make a global npm install:</p>
+        <p>~ npm install gulp-cli --global</p>
+        <p>This saved it on a more global. Now lets see all the steps to get it gulping! :D</p>
+        <ul>
+            <li>Navigate through the command line to the proper directory</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
 </body>
 </html>
